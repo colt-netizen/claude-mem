@@ -26,7 +26,10 @@ src/ui/viewer.html
 
 # Local MCP server config (for development only)
 .mcp.json
-.cursor/
+.cursor/*
+!.cursor/environment.json
+!.cursor/install.sh
+!.cursor/start.sh
 
 # Ignore WebStorm project files (for dinosaur IDE users)
 .idea/

@@ -1,0 +1,11 @@
+{
+  "name": "claude-mem",
+  "install": "script=$(find . -maxdepth 4 \\( -name node_modules -o -name .git \\) -prune -o -path '*/.cursor/install.sh' -print -quit)\nif [ -z \"$script\" ] && [ -f .cursor/install.sh ]; then script=.cursor/install.sh; fi\ntest -n \"$script\"\nbash \"$script\"",
+  "start": "script=$(find . -maxdepth 4 \\( -name node_modules -o -name .git \\) -prune -o -path '*/.cursor/start.sh' -print -quit)\nif [ -z \"$script\" ] && [ -f .cursor/start.sh ]; then script=.cursor/start.sh; fi\ntest -n \"$script\"\nbash \"$script\"",
+  "ports": [
+    {
+      "name": "claude-mem worker",
+      "port": 37777
+    }
+  ]
+}
